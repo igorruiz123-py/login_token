@@ -50,7 +50,7 @@ class Message(QLabel):
         self.setStyleSheet('''
             font-size: 15px;
             color: red''')
-        self.setAlignment(Qt.AlignmentFlag.AlignLeft)
+        self.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.setFixedHeight(20)
 
 
@@ -110,7 +110,7 @@ class MainWindow(QMainWindow):
 
         button2.clicked.connect(lambda: (self.matchTokens(self.token, int(display3.text())) and dataBase.insertNameAndEmail(display1.text(), display2.text())))
 
-        self.messageToken = Message()
+        self.messageToken = Message()   
         self.messageToken.setVisible(False)
         self.vLayout.addWidget(self.messageToken)
 
